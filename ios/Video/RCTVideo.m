@@ -1491,8 +1491,8 @@ static int const RCTVideoUnset = -1;
 
 - (void)videoPlayerViewControllerDidDismiss:(AVPlayerViewController *)playerViewController
 {
-  if (_playerViewController == playerViewController && _fullscreenPlayerPresented)
-  {
+ // if (_playerViewController == playerViewController && _fullscreenPlayerPresented)
+ // {
     _fullscreenPlayerPresented = false;
     _presentingViewController = nil;
     _playerViewController = nil;
@@ -1500,7 +1500,7 @@ static int const RCTVideoUnset = -1;
     if(self.onVideoFullscreenPlayerDidDismiss) {
       self.onVideoFullscreenPlayerDidDismiss(@{@"target": self.reactTag});
     }
-  }
+ // }
 }
 
 - (void)setFilter:(NSString *)filterName {
